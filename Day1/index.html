@@ -5,8 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<script>
+
+</script>
 <body>
+
+<div class="btns">
+    <div data-key="a" class="btn">
+        <div class="letter">A</div>
+        <div class="des">CLAP</div>
+    </div>
+    <div data-key="s" class="btn">
+        <div class="letter">S</div>
+        <div class="des">HIHAT</div>
+    </div>
+    <div data-key="d" class="btn">
+        <div class="letter">D</div>
+        <div class="des">KICK</div>
+    </div>
+    <div data-key="f" class="btn">
+        <div class="letter">F</div>
+        <div class="des">OPENHAT</div>
+    </div>
+    <div data-key="g" class="btn">
+        <div class="letter">G</div>
+        <div class="des">BOOM</div>
+    </div>
+    <div data-key="h" class="btn">
+        <div class="letter">H</div>
+        <div class="des">RIDE</div>
+    </div>
+    <div data-key="j" class="btn">
+        <div class="letter">J</div>
+        <div class="des">SNARE</div>
+    </div>
+    <div data-key="k" class="btn">
+        <div class="letter">K</div>
+        <div class="des">TOM</div>
+    </div>
+    <div data-key="l" class="btn">
+        <div class="letter">L</div>
+        <div class="des">TINK</div>
+    </div>
+</div>
+
+<audio data-key="a" src="sounds/clap.wav"></audio>
+<audio data-key="s" src="sounds/hihat.wav"></audio>
+<audio data-key="d" src="sounds/kick.wav"></audio>
+<audio data-key="f" src="sounds/openhat.wav"></audio>
+<audio data-key="g" src="sounds/boom.wav"></audio>
+<audio data-key="h" src="sounds/ride.wav"></audio>
+<audio data-key="j" src="sounds/snare.wav"></audio>
+<audio data-key="k" src="sounds/tom.wav"></audio>
+<audio data-key="l" src="sounds/tink.wav"></audio>
+
+<script>
+    window.addEventListener('keydown', function(e) {
+        const audio = document.querySelector(`audio[data-key="${e.key}"]`)
+        console.log(audio)
+        if (!audio) return; // stop the function from running all together
+
+        audio.play()
+    });
+</script>
+
     
 </body>
 </html>
